@@ -98,20 +98,20 @@ function prepareData(data, options) {
         }
 
         if(opt.scale !== 1) {
-            frame.x *= opt.scale;
-            frame.y *= opt.scale;
-            frame.w *= opt.scale;
-            frame.h *= opt.scale;
-            frame.hw *= opt.scale;
-            frame.hh *= opt.scale;
+            frame.x = Math.round(frame.x * opt.scale);
+            frame.y = Math.round(frame.y * opt.scale);
+            frame.w = Math.round(frame.w * opt.scale);
+            frame.h = Math.round(frame.h * opt.scale);
+            frame.hw = Math.round(frame.hw * opt.scale);
+            frame.hh = Math.round(frame.hh * opt.scale);
 
-            spriteSourceSize.x *= opt.scale;
-            spriteSourceSize.y *= opt.scale;
-            spriteSourceSize.w *= opt.scale;
-            spriteSourceSize.h *= opt.scale;
+            spriteSourceSize.x = Math.round(spriteSourceSize.x * opt.scale);
+            spriteSourceSize.y = Math.round(spriteSourceSize.y * opt.scale);
+            spriteSourceSize.w = Math.round(spriteSourceSize.w * opt.scale);
+            spriteSourceSize.h = Math.round(spriteSourceSize.h * opt.scale);
 
-            sourceSize.w *= opt.scale;
-            sourceSize.h *= opt.scale;
+            sourceSize.w = Math.round(sourceSize.w * opt.scale);
+            sourceSize.h = Math.round(sourceSize.h * opt.scale);
         }
 
         ret.push({
